@@ -1,8 +1,6 @@
 import PropTypes from 'prop-types';
 
-function Display(props) {
-  const { result } = props;
-
+function Display({ result }) {
   return (
     <div>
       {result}
