@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import Button from './Button';
 
 function ButtonPanel(props) {
@@ -37,5 +38,8 @@ function ButtonPanel(props) {
     </>
   );
 }
+ButtonPanel.propTypes = {
+  clickHandler: PropTypes.func.isRequired,
+};
 
 export default ButtonPanel;
