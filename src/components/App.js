@@ -10,7 +10,8 @@ export default class App extends React.Component {
     this.state = {
       total: null,
       next: null,
-      operation: null
+      // eslint-disable-next-line react/no-unused-state
+      operation: null,
     };
     this.handleClick = this.handleClick.bind(this);
   }
@@ -25,7 +26,7 @@ export default class App extends React.Component {
     return (
       <>
         <Display result={data.next || data.total || '0'} />
-        <ButtonPanel />
+        <ButtonPanel clickHandler={this.handleClick} />
       </>
     );
   }
