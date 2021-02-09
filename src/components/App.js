@@ -22,10 +22,10 @@ export default class App extends React.Component {
   }
 
   render() {
-    const data = this.state;
+    const { next, total } = this.state;
     return (
       <>
-        <Display result={data.next || data.total || '0'} />
+        <Display result={next || total || '0'} />
         <ButtonPanel clickHandler={this.handleClick} />
       </>
     );
