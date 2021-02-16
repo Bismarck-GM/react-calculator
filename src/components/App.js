@@ -7,7 +7,7 @@ import calculate from '../logic/calculate';
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  min-width: 700px;
+  max-width: 700px;
   align-items: center;
   justify-content: center; 
 `;
