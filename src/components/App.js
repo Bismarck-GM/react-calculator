@@ -1,33 +1,28 @@
 import React from 'react';
-import Display from './Display';
-import ButtonPanel from './ButtonPanel';
-import calculate from '../logic/calculate';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import styled from 'styled-components';
+import Nav from './Nav';
+import Home from './Home';
+import Quote from './Quote';
+import Calculator from './Calculator';
 
-export default class App extends React.Component {
-  constructor(props) {
-    super(props);
+const Container = styled.div`
+  max-width: 100%;
+  min-height: 100%;
+  background-color: #F3F3F3;
+`;
 
-    this.state = {
-      total: null,
-      next: null,
-      // eslint-disable-next-line react/no-unused-state
-      operation: null,
-    };
-    this.handleClick = this.handleClick.bind(this);
-  }
+const App = () => (
+  <Container>
+    <Router>
+      <Nav />
+      <Switch>
+        <Route path="/" exact component={Home} />
+        <Route path="/calculator" exact component={Calculator} />
+        <Route path="/quote" exact component={Quote} />
+      </Switch>
+    </Router>
+  </Container>
+);
 
-  handleClick(buttonName) {
-    const data = this.state;
-    this.setState(calculate(data, buttonName));
-  }
-
-  render() {
-    const { next, total } = this.state;
-    return (
-      <>
-        <Display result={next || total || '0'} />
-        <ButtonPanel clickHandler={this.handleClick} />
-      </>
-    );
-  }
-}
+export default App;

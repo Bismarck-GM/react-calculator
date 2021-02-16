@@ -3,7 +3,7 @@ import Big from 'big.js';
 export default function operate(numberOne, numberTwo, operation) {
   const plus = '+';
   const minus = '-';
-  const times = 'X';
+  const times = 'x';
   const divide = '÷';
   const mNumberOne = Big(numberOne || '0');
   const mNumberTwo = Big(numberTwo || '0');

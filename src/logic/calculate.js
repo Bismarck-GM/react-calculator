@@ -11,10 +11,10 @@ export default function calculate(data, buttonName) {
   switch (buttonName) {
     case plusMinus:
       if (data.next) {
-        return { next: (-1 * parseFloat(data.next)).toString() };
+        return { ...data, next: (-1 * parseFloat(data.next)).toString() };
       }
       if (data.total) {
-        return { total: (-1 * parseFloat(data.total)).toString() };
+        return { ...data, total: (-1 * parseFloat(data.total)).toString() };
       }
       break;
     case mod:
@@ -36,6 +36,7 @@ export default function calculate(data, buttonName) {
       }
       if (data.next) {
         return {
+          ...data,
           next: Big(data.next)
             .div(Big('100')).toString(),
         };
@@ -49,7 +50,7 @@ export default function calculate(data, buttonName) {
           operation: null,
         };
       }
-      return {};
+      return { ...data };
     case allClear:
       return {
         total: null,
@@ -59,9 +60,9 @@ export default function calculate(data, buttonName) {
     case dec:
       if (data.next) {
         if (data.next.includes('.')) {
-          return {};
+          return { ...data };
         }
-        return { next: `${data.next}.` };
+        return { ...data, next: `${data.next}.` };
       }
       return { next: '0.' };
     case '0':
@@ -75,22 +76,24 @@ export default function calculate(data, buttonName) {
     case '8':
     case '9':
       if (data.next === '0' && buttonName === '0') {
-        return {};
+        return { ...data };
       }
       if (data.operation) {
         if (data.next) {
-          return { next: data.next + buttonName };
+          return { ...data, next: data.next + buttonName };
         }
-        return { next: buttonName };
+        return { ...data, next: buttonName };
       }
       if (data.next) {
         const next = data.next === '0' ? buttonName : data.next + buttonName;
         return {
+          ...data,
           next,
           total: null,
         };
       }
       return {
+        ...data,
         next: buttonName,
         total: null,
       };
@@ -104,7 +107,7 @@ export default function calculate(data, buttonName) {
         };
       }
       if (!data.next) {
-        return { operation: buttonName };
+        return { ...data, operation: buttonName };
       }
       return { total: data.next, next: null, operation: buttonName };
   }
