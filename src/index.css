@@ -1,3 +1,8 @@
+html, body {
+  height: 100%;
+  min-height: 100%;
+}
+
 body {
   margin: 0;
   font-family:
@@ -25,4 +30,8 @@ code {
     Consolas,
     'Courier New',
     monospace;
+}
+
+#app {
+  height: 100%;
 }

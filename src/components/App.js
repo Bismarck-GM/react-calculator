@@ -7,12 +7,9 @@ import Quote from './Quote';
 import Calculator from './Calculator';
 
 const Container = styled.div`
-  display: flex;
-  flex-direction: column;
   max-width: 100%;
-  max-height: 100vh;
-  align-items: center;
-  justify-content: center; 
+  min-height: 100%;
+  background-color: #F3F3F3;
 `;
 
 const App = () => (

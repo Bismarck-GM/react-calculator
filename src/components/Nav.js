@@ -5,24 +5,40 @@ import styled from 'styled-components';
 const Navigation = styled.nav`
   display: flex;
   width: 100%;
-  justify-content: space-between;
+  justify-content: space-around;
+  align-items: center;
   background-color: teal;
+  color: white;
+`;
+
+const List = styled.ul`
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+`;
+
+const StyledLink = styled(Link)`
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
 `;
 
 const Nav = () => (
   <Navigation>
-    <h3>Math Magicians</h3>
-    <ul>
-      <Link to="/">
+    <h1>Math Magicians</h1>
+    <List>
+      <StyledLink to="/">
         <li>Home</li>
-      </Link>
-      <Link to="/calculator">
+      </StyledLink>
+      <StyledLink to="/calculator">
         <li>Calculator</li>
-      </Link>
-      <Link to="/quote">
+      </StyledLink>
+      <StyledLink to="/quote">
         <li>Quote</li>
-      </Link>
-    </ul>
+      </StyledLink>
+    </List>
   </Navigation>
 );
 
