@@ -1,17 +1,32 @@
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
-function Button(props) {
-  const { name, clickHandler } = props;
+const ButtonContainer = styled.button`
+  min-width: ${props => (props.wide ? '50%' : '25%')};
+  border: 1px solid #D1D1D1;
+  font-size: 30px;
+  background-color: ${props => (props.color ? '#F5913E' : '')}
+`;
+
+const Button = props => {
+  const {
+    name,
+    clickHandler,
+    color,
+    wide,
+  } = props;
   const handleClick = () => { clickHandler(name); };
   return (
-    <button type="button" onClick={handleClick}>
+    <ButtonContainer type="button" onClick={handleClick} color={color} wide={wide}>
       {name}
-    </button>
+    </ButtonContainer>
   );
-}
+};
 
 Button.propTypes = {
   name: PropTypes.string.isRequired,
+  color: PropTypes.string.isRequired,
+  wide: PropTypes.string.isRequired,
   clickHandler: PropTypes.func.isRequired,
 };
 export default Button;

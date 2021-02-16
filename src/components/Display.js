@@ -4,19 +4,31 @@ import styled from 'styled-components';
 // 858693
 
 const Container = styled.div`
+  box-sizing: border-box;
   background-color: #858693;
-  color: white;
-  font-size: 80px;
-  font-weight: bold;
-  padding: 10px;
+  padding: 20px;
   min-width: 100%;
-  height: 100px;
+  max-width: 100%;
+  max-height: 100px;
+`;
+
+const Result = styled.p`
+  align-self: center;
+  justify-self: center;
+  color: white;
+  font-size: 50px;
+  font-weight: bold;
   text-align: right;
+  vertical-align: middle;
+  margin: auto;
+  max-width: 100%;
+  text-overflow: ellipsis;
+  overflow : hidden;
 `;
 
 const Display = ({ result }) => (
   <Container>
-    {result}
+    <Result>{result}</Result>
   </Container>
 );
 
