@@ -5,23 +5,24 @@ export default function operate(numberOne, numberTwo, operation) {
   const minus = '-';
   const times = 'x';
   const divide = '÷';
-  const mNumberOne = Big(numberOne || '0');
-  const mNumberTwo = Big(numberTwo || '0');
+  const mNumberOne = Big(numberOne);
+  const mNumberTwo = Big(numberTwo);
+  let result;
   switch (operation) {
     case plus:
-      return mNumberOne.plus(mNumberTwo).toString();
+      result = mNumberOne.plus(mNumberTwo);
+      break;
     case minus:
-      return mNumberOne.minus(mNumberTwo).toString();
+      result = mNumberOne.minus(mNumberTwo);
+      break;
     case times:
-      return mNumberOne.times(mNumberTwo).toString();
+      result = mNumberOne.times(mNumberTwo);
+      break;
     case divide:
-      // eslint-disable-next-line eqeqeq
-      if (mNumberTwo == '0') {
-        return 'Cant divide by 0!';
-      }
-      return mNumberOne.div(mNumberTwo).toString();
-
+      result = mNumberTwo.c[0] === 0 ? 'Can\'t divide by 0!' : mNumberOne.div(mNumberTwo);
+      break;
     default:
-      throw new Error(`Invalid Operator: ${operation}`);
+      result = 'ERROR';
   }
+  return (result.toString());
 }
