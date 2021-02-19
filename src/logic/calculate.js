@@ -59,7 +59,7 @@ export default function calculate(data, buttonName) {
       };
     case dec:
       if (data.next) {
-        if (data.next.includes('.')) {
+        if (data.next.toString().includes('.')) {
           return { ...data };
         }
         return { ...data, next: `${data.next}.` };
