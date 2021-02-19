@@ -17,7 +17,7 @@ const Button = props => {
   } = props;
   const handleClick = () => { clickHandler(name); };
   return (
-    <ButtonContainer type="button" onClick={handleClick} color={color} wide={wide}>
+    <ButtonContainer data-testid="calculator-button" type="button" onClick={handleClick} color={color} wide={wide}>
       {name}
     </ButtonContainer>
   );
