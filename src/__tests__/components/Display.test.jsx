@@ -11,7 +11,7 @@ const fakeProps2 = {
   result: '5',
 };
 
-describe('Display', () => {
+describe('Display Component', () => {
   it('Displays the correct passed prop', () => {
     const { getByText } = render(<Display {...fakeProps1} />);
 

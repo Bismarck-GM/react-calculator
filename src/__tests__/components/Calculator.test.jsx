@@ -4,7 +4,7 @@ import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import Calculator from '../../components/Calculator';
 
-describe('Calculator', () => {
+describe('Calculator Component', () => {
   it('Displays the correct h1 header text.', () => {
     render(<Calculator />);
     expect(screen.getByText(/Let's do some Math!/i));

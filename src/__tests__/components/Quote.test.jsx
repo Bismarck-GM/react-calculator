@@ -3,7 +3,7 @@ import { screen, render } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import Quote from '../../components/Quote';
 
-describe('Quote', () => {
+describe('Quote Component', () => {
   it('Renders correctly', () => {
     render(<Quote />);
 

@@ -11,7 +11,7 @@ const props = {
   wide: '25%',
 };
 
-describe('Button', () => {
+describe('Button Component', () => {
   it('Renders correctly', () => {
     const { getByText } = render(<Button {...props} />);
 
