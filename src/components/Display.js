@@ -28,7 +28,7 @@ const Result = styled.p`
 
 const Display = ({ result }) => (
   <Container>
-    <Result>{result}</Result>
+    <Result data-testid="calculator-display">{result}</Result>
   </Container>
 );
 

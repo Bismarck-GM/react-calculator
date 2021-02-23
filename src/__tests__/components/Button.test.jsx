@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
-import { render, fireEvent } from '@testing-library/react';
+import { render, fireEvent, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import Button from '../../components/Button';
 
@@ -21,8 +21,8 @@ describe('Button', () => {
   });
 
   it('Triggers clickHandler when clicked', () => {
-    const { getByText } = render(<Button {...props} />);
-    fireEvent.click(getByText('6'));
+    render(<Button {...props} />);
+    fireEvent.click(screen.getByText('6'));
     expect(props.clickHandler).toHaveBeenCalled();
   });
 });
