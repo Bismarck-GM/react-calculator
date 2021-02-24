@@ -10,11 +10,11 @@ export default function calculate(data, buttonName) {
 
   switch (buttonName) {
     case plusMinus:
-      if (data.next) {
-        return { ...data, next: (-1 * parseFloat(data.next)).toString() };
-      }
       if (data.total) {
         return { ...data, total: (-1 * parseFloat(data.total)).toString() };
+      }
+      if (data.next) {
+        return { ...data, next: (-1 * parseFloat(data.next)).toString() };
       }
       break;
     case mod:
@@ -59,7 +59,7 @@ export default function calculate(data, buttonName) {
       };
     case dec:
       if (data.next) {
-        if (data.next.includes('.')) {
+        if (data.next.toString().includes('.')) {
           return { ...data };
         }
         return { ...data, next: `${data.next}.` };

@@ -14,33 +14,33 @@ function ButtonPanel(props) {
   return (
     <>
       <Row>
-        <Button name="AC" clickHandler={handleClick} />
-        <Button name="+/-" clickHandler={handleClick} />
-        <Button name="%" clickHandler={handleClick} />
-        <Button name="÷" clickHandler={handleClick} color />
+        <Button name="AC" clickHandler={handleClick} wide="25%" color="#EFEFEF" />
+        <Button name="+/-" clickHandler={handleClick} wide="25%" color="#EFEFEF" />
+        <Button name="%" clickHandler={handleClick} wide="25%" color="#EFEFEF" />
+        <Button name="÷" clickHandler={handleClick} wide="25%" color="#F5913E" />
       </Row>
       <Row>
-        <Button name="7" clickHandler={handleClick} />
-        <Button name="8" clickHandler={handleClick} />
-        <Button name="9" clickHandler={handleClick} />
-        <Button name="x" clickHandler={handleClick} color />
+        <Button name="7" clickHandler={handleClick} wide="25%" color="#EFEFEF" />
+        <Button name="8" clickHandler={handleClick} wide="25%" color="#EFEFEF" />
+        <Button name="9" clickHandler={handleClick} wide="25%" color="#EFEFEF" />
+        <Button name="x" clickHandler={handleClick} wide="25%" color="#F5913E" />
       </Row>
       <Row>
-        <Button name="4" clickHandler={handleClick} />
-        <Button name="5" clickHandler={handleClick} />
-        <Button name="6" clickHandler={handleClick} />
-        <Button name="-" clickHandler={handleClick} color />
+        <Button name="4" clickHandler={handleClick} wide="25%" color="#EFEFEF" />
+        <Button name="5" clickHandler={handleClick} wide="25%" color="#EFEFEF" />
+        <Button name="6" clickHandler={handleClick} wide="25%" color="#EFEFEF" />
+        <Button name="-" clickHandler={handleClick} wide="25%" color="#F5913E" />
       </Row>
       <Row>
-        <Button name="1" clickHandler={handleClick} />
-        <Button name="2" clickHandler={handleClick} />
-        <Button name="3" clickHandler={handleClick} />
-        <Button name="+" clickHandler={handleClick} color />
+        <Button name="1" clickHandler={handleClick} wide="25%" color="#EFEFEF" />
+        <Button name="2" clickHandler={handleClick} wide="25%" color="#EFEFEF" />
+        <Button name="3" clickHandler={handleClick} wide="25%" color="#EFEFEF" />
+        <Button name="+" clickHandler={handleClick} wide="25%" color="#F5913E" />
       </Row>
       <Row>
-        <Button name="0" clickHandler={handleClick} wide />
-        <Button name="." clickHandler={handleClick} />
-        <Button name="=" clickHandler={handleClick} />
+        <Button name="0" clickHandler={handleClick} wide="50%" color="#EFEFEF" />
+        <Button name="." clickHandler={handleClick} wide="25%" color="#EFEFEF" />
+        <Button name="=" clickHandler={handleClick} wide="25%" color="#F5913E" />
       </Row>
     </>
   );

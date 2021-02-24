@@ -17,8 +17,8 @@ const Text = styled.h1`
 `;
 
 const Quote = () => (
-  <QuoteContainer>
-    <Text>
+  <QuoteContainer data-testid="header-wrapper">
+    <Text data-testid="header">
       Pure mathematics is, in its way, the poetry of logical ideas.
     </Text>
     — Albert Einstein, German theoretical physicist
