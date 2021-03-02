@@ -1,4 +1,5 @@
 {
+  "homepage": "https://bismarck-gm.github.io/react-calculator/",
   "name": "react-calculator",
   "version": "0.1.0",
   "private": true,
@@ -15,6 +16,8 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -47,6 +50,7 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.20.6",
     "eslint-plugin-react-hooks": "^2.5.1",
+    "gh-pages": "^3.1.0",
     "jest-dom": "^4.0.0",
     "react-test-render": "^1.1.2",
     "stylelint": "^13.9.0",
