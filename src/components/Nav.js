@@ -29,13 +29,13 @@ const Nav = () => (
   <Navigation>
     <h1>Math Magicians</h1>
     <List>
-      <StyledLink to="/">
+      <StyledLink to="/react-calculator/">
         <li>Home</li>
       </StyledLink>
-      <StyledLink to="/calculator">
+      <StyledLink to="/react-calculator/calculator">
         <li>Calculator</li>
       </StyledLink>
-      <StyledLink to="/quote">
+      <StyledLink to="/react-calculator/quote">
         <li>Quote</li>
       </StyledLink>
     </List>

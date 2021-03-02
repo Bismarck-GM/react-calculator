@@ -17,9 +17,9 @@ const App = () => (
     <Router>
       <Nav />
       <Switch>
-        <Route path="/" exact component={Home} />
-        <Route path="/calculator" exact component={Calculator} />
-        <Route path="/quote" exact component={Quote} />
+        <Route path="/react-calculator/" exact component={Home} />
+        <Route path="/react-calculator/calculator" exact component={Calculator} />
+        <Route path="/react-calculator/quote" exact component={Quote} />
       </Switch>
     </Router>
   </Container>
