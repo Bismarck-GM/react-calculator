@@ -8,7 +8,7 @@
 
 ## Live Demo:
 
-#### [React Calculator deployed in Heroku - Click Here](https://naked-calculator.herokuapp.com/)
+#### [React Calculator deployed in GH-Pages - Click Here](https://bismarck-gm.github.io/react-calculator/)
 
 ## Built With
 
